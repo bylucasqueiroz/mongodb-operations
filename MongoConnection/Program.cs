@@ -10,7 +10,7 @@ namespace MongoConnection
     {
         static void Main(string[] args)
         {
-            string connectionString = "mongodb+srv://<login>:<password@<cluster>.mongodb.net/<database>?retryWrites=true&w=majority";
+            string connectionString = "mongodb+srv://<login>:<password>@<cluster>.mongodb.net/<database>?retryWrites=true&w=majority";
             IMongoClient client = new MongoClient(connectionString);
             IMongoDatabase database = client.GetDatabase("application");
             IMongoCollection<Infos> colInfos = database.GetCollection<Infos>("infos");
